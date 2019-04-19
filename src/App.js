@@ -34,8 +34,11 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
   return { items: state.items }
 }
 
-export default connect(mapStateToProps)(App);
+// Anonymous way to do the above function
+
+// export default connect( state => ({ items: state.items })) (App);
+
+export default connect(mapStateToProps)(App)
